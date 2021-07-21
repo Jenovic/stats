@@ -14,6 +14,7 @@ import CourseManager from '../services/CourseManager';
 import SessionManager from '../services/SessionManager';
 import UserManager from '../services/UserManager';
 import { idSchema, statsSchema } from '../tests/Course';
+import getAverageScore from '../utilities/getAverageScore';
 
 @Controller('/courses')
 export default class CourseController implements IController<Course> {
@@ -125,7 +126,7 @@ export default class CourseController implements IController<Course> {
 
     // update the stats object
     stats['totalModulesStudied'] = totalModulesStudied;
-    stats['averageScore'] = averageScore;
+    stats['averageScore'] = getAverageScore(averageScore, totalModulesStudied);
     stats['timeStudied'] = timeStudied;
 
     res.status(200).send(stats);
