@@ -16,6 +16,7 @@ provide the capability to create new stats as well as updating stats via HTTP ca
 | `yarn migrate`               | Run migrations                               |
 | `yarn migrate:rollback`      | Rollback last migration                      |
 | `yarn make:migration <name>` | Create new migration                         |
+| `yarn test`                  | run unit test on the getAverage function     |
 
 ## Documentation
 
