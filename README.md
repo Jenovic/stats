@@ -61,6 +61,10 @@ Assuming that the session belongs to a course and a user, I include a connection
 
 This is simply where all the interfaces will are stored.
 
+### Utilities
+
+This directory has any global utility function you may need. For instance, getAverageScore might be needed in a few places within the app
+
 ### Tests
 
 Data validation for all the http requests made.
